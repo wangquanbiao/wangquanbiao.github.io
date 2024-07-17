@@ -7,7 +7,10 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/wangquanbiao.github.io/dist/",
+  base: "./",
+  build: {
+    outDir: 'docs'
+  },
   plugins: [
     vue(),
     AutoImport({
@@ -27,11 +30,6 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3011', // 设置代理目标
-        changeOrigin: true, // 是否改变请求源地址
-        rewrite: (path: String) => path.replace(/^\/api/, '') // 将 /api 替换为空字符串
-      },
-      '/api2': {
         target: 'http://localhost:3011', // 设置代理目标
         changeOrigin: true, // 是否改变请求源地址
         rewrite: (path: String) => path.replace(/^\/api/, '') // 将 /api 替换为空字符串
