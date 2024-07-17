@@ -7,7 +7,7 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/wangquanbiao.github.io/",
+  base: "/wangquanbiao.github.io/dist/",
   plugins: [
     vue(),
     AutoImport({
