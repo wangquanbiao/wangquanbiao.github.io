@@ -6,9 +6,8 @@ import type { Poetry } from '@/types/home'
 let poetry = ref<Poetry>({});
 
 onMounted(() => {
-  userRequest({ userName: '张三', psw: '1234' }).then((res: any) => {
-    // console.log('res: ', res)
-  })
+  // userRequest({ userName: '张三', psw: '1234' }).then((res: any) => {
+  // })
 
   jinrishici.load((result: any) => {
     if (result.status) {
