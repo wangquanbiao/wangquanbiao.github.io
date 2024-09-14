@@ -30,7 +30,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3011', // 设置代理目标
+        target: 'https://wangquanbiao.netlify.app', // 设置代理目标
         changeOrigin: true, // 是否改变请求源地址
         rewrite: (path: String) => path.replace(/^\/api/, '') // 将 /api 替换为空字符串
       },
